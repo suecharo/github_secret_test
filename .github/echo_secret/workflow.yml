@@ -1,0 +1,9 @@
+name: echo_secret
+on: [push, pull_request]
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo secret
+        run: |
+          echo "${{ secrets.TEST_SECRET }}"
